@@ -1,6 +1,5 @@
 package br.com.dio.desafio.dominio;
 
-import java.security.Principal;
 import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Optional;
