@@ -2,25 +2,12 @@ package br.com.dio.desafio.dominio;
 
 import java.io.ObjectInputStream.GetField;
 
-public class Curso {
-    private String titulo;
-    private String descricao;
+public class Curso extends Conteudo {
     private int cargaHoraria;
 
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    @Override
+    public double calcularXp() {
+        return XP_PADRAO * cargaHoraria;
     }
 
     public int getCargaHoraria() {
@@ -34,8 +21,8 @@ public class Curso {
     @Override
     public String toString() {
         return "Curso{" +
-                "Titulo='" + titulo + '\'' +
-                ", descricao='" + descricao + '\'' +
+                "Titulo='" + getTitulo() + '\'' +
+                ", descricao='" + getDescricao() + '\'' +
                 ", cargaHoraria=" + cargaHoraria + 
                 '}';
     }
